@@ -50,13 +50,17 @@ PROXIES_LIST = [
 API_ENDPOINT = "https://api2.telcel.com/api/esim/registerFriend"
 
 HEADERS_TEMPLATE = {
-    'X-Channel': 'WEB_AMIGO_ESIM',
-    'X-Device-Type': 'WEB',
-    'Content-Type': 'application/json',
-    'User-Agent': fake.user_agent(),
-    'Referer': 'https://www.telcel.com/',
-    'Origin': 'https://www.telcel.com',
+Host: api2.telcel.com
+Content-Type: application/json
+User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 17_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1
+Referer: https://www.telcel.com/
+Origin: https://www.telcel.com
+X-Channel: WEB_AMIGO_ESIM
+X-Device-Type: WEB
+Accept-Encoding: gzip, deflate
+Connection: close
 }
+
 
 KEY_FILE = 'esim_keys.json'
 HITS_FILE = 'hits.txt'
@@ -108,7 +112,7 @@ async def start(update:update,message=context):
 	if user_id in users_db['whitelist'] :
 		
 	await update.message.reply_text(
-				f"🔥 ¡Bienvenido al ESIM GOD BOT!\n"
+				f"🔥 ¡Bienvenido al ESIM GOD BOT by ImMrTx!\n"
 				f"💰 Cada eSIM cuesta una clave de ${amount}\n\n"
 				f"📥 Usa:\n"
 				f"`/esim <LADA> <correo>`\n\n"
