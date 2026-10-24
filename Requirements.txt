@@ -1,0 +1,9 @@
+python-telegram-bot[job-queue]==20.9
+requests==2.31.*
+faker==24.*
+segno==1.6.*
+dnspython==2.*
+uvicorn==0.30.*
+gunicorn==21.*
+aiohttp==3.*
+flask==3.*
